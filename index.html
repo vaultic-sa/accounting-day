@@ -506,8 +506,8 @@ document.addEventListener("pointerdown",()=>SND.init());
 /* ---------- shared leaderboard (Supabase) ----------
    Only the public "anon"/publishable key belongs here: it can call the four game
    functions and nothing else (tables are closed by RLS, scores are computed on the server). */
-const SUPABASE_URL="__SUPABASE_URL__";
-const SUPABASE_ANON_KEY="__SUPABASE_ANON_KEY__";
+const SUPABASE_URL="https://lvklotxzcdcnfqekqjhy.supabase.co";
+const SUPABASE_ANON_KEY="sb_publishable_tBx_SxoF5ubd0SuaoaLjtg_SR63Hp5B";
 const ONLINE=/^https:\/\//.test(SUPABASE_URL)&&SUPABASE_ANON_KEY.length>20;
 async function rpc(fn,args){
   if(!ONLINE){const e=new Error("not_configured");e.code="not_configured";throw e}
